@@ -45,9 +45,10 @@ class BiodataController extends Controller
      * @param  \App\biodata  $biodata
      * @return \Illuminate\Http\Response
      */
-    public function show(biodata $biodata)
+    public function show($id)
     {
-        //
+        $data = Biodata::find($id);
+        return view('dashboard.detail', compact('data'));
     }
 
     /**

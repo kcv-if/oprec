@@ -8,13 +8,40 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+                    <table border="1">
+                        <thead>
+                        <tr>
+                            <th>NRP</th>
+                            <th>Nama</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>NRP</th>
+                            <th>Nama</th>
+                            <th>Action</th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        @if($data['jumlah'] == 0)
+                            <td>  </td>
+                            {{--<td> </td>--}}
+                        @else
+                            @foreach($data['calon'] as $datas)
+                                <tr>
+                                    <td>{{ $datas->nrp }}</td>
+                                    <td>{{ $datas->nama }}</td>
+                                    <td>
+                                        <a href="{{route('dashboard.detail',$datas->id)}}">
+                                            <button>detail</button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

@@ -23,8 +23,12 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('dashboard.home');
+    {   $data = array(
+            'calon' => Biodata::all(),
+            'jumlah' => count(Biodata::all())
+        );
+//        dd($data['jumlah']);
+        return view('dashboard.home', compact('data'));
     }
 
     public function daftar_create()

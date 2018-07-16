@@ -23,4 +23,5 @@ Route::post('/daftar', 'HomeController@daftar_store')->name('daftar.store');
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('dashboard');
+    Route::get('detail/{id}', 'BiodataController@show')->name('dashboard.detail');
 });
