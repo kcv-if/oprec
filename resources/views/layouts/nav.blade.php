@@ -1,7 +1,7 @@
-<div class="navheader">
+<div class="navheader links clear">
     	
     <div style="float: left">
-    	<a class="logocolata" href="{{ url('/') }}">
+    	<a class="logokcv" href="{{ url('/') }}">
 	   		<img src="{{asset('images/logokcv.png')}}" alt>
     	</a>
    	</div>
@@ -21,9 +21,8 @@
 	            <a class="navlink" href="{{ route('register') }}">Register</a>
            		<a class="navlink" href="{{ route('login') }}">Login</a>
 	        @else
-	            <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
+                        {{ Auth::user()->name }}
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -35,7 +34,6 @@
                             @csrf
                         </form>
                     </div>
-                </li>
 	        @endguest
    		@endif
    	</div>

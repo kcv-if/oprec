@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no>
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -26,38 +26,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js" integrity="sha256-H0TPKZAP4+uKmBpntUUMrKgH4VXBQNDZumun6fvan4w=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" integrity="sha256-v00gso3ox/d0KLJDJew6+zm29+J39rYWZvOgoXzDtCs=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" integrity="sha256-rUSIjmg03RQ3LWNpEkVRPNoXytm7f1rJ3xAWO6gxCPc=" crossorigin="anonymous"></script>
-    <script src="{{asset('js/script.min.js')}}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/script.js')}}"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
 
 </head>
-<body>
-
+<body data-0="background-position: 0px 0px, 0px 0px, 0px 0px;" data-100000="background-position:-10000px 20000px, -50000px 0px, 0px -20000px;">
     @yield('content')
- 
+    
     <script type="text/javascript">
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);
     </script>
 
     <script type="text/javascript">
-    window.onload = function() {
-        document.getElementById("preloader").style.display = 'none';
-        skrollr.init({
+        var s = skrollr.init({
             forceHeight: false
         });
-    }
     </script>
 
     @if(Request::is('/'))
     @else
         <script type="text/javascript">
             $(document).ready(function() {
-                $('.header').addClass('header-sticky');
+                $('.navheader').addClass('header-sticky');
             });
                     
         </script>
     @endif
 
-    <div id="preloader"></div>
 
 </body>
 </html>

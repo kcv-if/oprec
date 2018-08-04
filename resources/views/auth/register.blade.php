@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('content')
 @include('layouts.nav')
-<div class="container">
+@section('content')
+<div class="container" style="margin-top: 100px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
