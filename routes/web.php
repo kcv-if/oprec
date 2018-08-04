@@ -18,10 +18,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/daftar', 'HomeController@daftar_create')->name('daftar');
-Route::post('/daftar', 'HomeController@daftar_store')->name('daftar.store');
+Route::get('/daftar', 'DaftarController@daftar_create')->name('daftar');
+Route::post('/daftar', 'DaftarController@daftar_store')->name('daftar.store');
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('dashboard');
-    Route::get('detail/{id}', 'BiodataController@show')->name('dashboard.detail');
+    Route::get('detail/{id}', 'HomeController@detail_pendaftar')->name('dashboard.detail');
 });

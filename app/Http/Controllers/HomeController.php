@@ -23,36 +23,17 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   $data = array(
+    {
+        $data = array(
             'calon' => Biodata::all(),
             'jumlah' => count(Biodata::all())
         );
-//        dd($data['jumlah']);
         return view('dashboard.home', compact('data'));
     }
 
-    public function daftar_create()
+    public function detail_pendaftar($id)
     {
-        return view('daftar');
-    }
-
-    public function daftar_store(Request $request)
-    {
-        $foto_name = time().'.foto.'.$request->nrp.'.'.$request->foto->getClientOriginalExtension();
-        $transkrip_name = time().'.transkrip.'.$request->nrp.'.'.$request->transkrip->getClientOriginalExtension();
-        $request->foto->move(public_path('foto'), $foto_name);
-        $request->transkrip->move(public_path('transkrip'), $transkrip_name);
-
-        $data = new Biodata();
-        $data->nrp = $request->nrp;
-        $data->nama = $request->nama;
-        $data->alasan = $request->alasan;
-        $data->hobi = $request->hobi;
-        $data->kesibukan = $request->kesibukan;
-        $data->path_foto = '/foto'.$foto_name;
-        $data->path_transkrip = '/transkrip'.$transkrip_name;
-        $data->save();
-
-        return redirect(route('daftar'));
+        $data = Biodata::find($id);
+        return view('dashboard.detail', compact('data'));
     }
 }
