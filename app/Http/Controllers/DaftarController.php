@@ -14,6 +14,7 @@ class DaftarController extends Controller
 
     public function daftar_store(Request $request)
     {
+//        dd($request);
         $foto_name = time().'.foto.'.$request->nrp.'.'.$request->foto->getClientOriginalExtension();
         $transkrip_name = time().'.transkrip.'.$request->nrp.'.'.$request->transkrip->getClientOriginalExtension();
         $request->foto->move(public_path('foto'), $foto_name);
@@ -27,8 +28,17 @@ class DaftarController extends Controller
         $data->kesibukan = $request->kesibukan;
         $data->path_foto = '/foto/'.$foto_name;
         $data->path_transkrip = '/transkrip/'.$transkrip_name;
+        $data->mk1 = !is_null($request->mk1);
+        $data->mk2 = !is_null($request->mk2);
+        $data->mk3 = !is_null($request->mk3);
+        $data->mk4 = !is_null($request->mk4);
+        $data->mk5 = !is_null($request->mk5);
+        $data->mk6 = !is_null($request->mk6);
+        $data->mk7 = !is_null($request->mk7);
+        $data->mk8 = !is_null($request->mk8);
+        $data->mk9 = !is_null($request->mk9);
         $data->save();
 
-        return redirect(route('daftar'));
+        return redirect(route('home'));
     }
 }
