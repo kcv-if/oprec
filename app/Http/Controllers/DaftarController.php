@@ -65,8 +65,8 @@ class DaftarController extends Controller
         $data->mk7 = !is_null($validator->mk7);
         $data->mk8 = !is_null($validator->mk8);
         $data->mk9 = !is_null($validator->mk9);
-        $data->mk10 = !is_null($validator->mk9);
-        $data->mk11 = !is_null($validator->mk9);
+        $data->mk10 = !is_null($validator->mk10);
+        $data->mk11 = !is_null($validator->mk11);
         $data->save();
 
         return redirect(route('home'));
