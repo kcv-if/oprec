@@ -2,21 +2,7 @@
 
 @include('layouts.nav')
 @section('content')
-    {{-- <div class="background-frame" data-module="Frame">
-        <div class="frame">
-            <div class="main-background" style="background-image:url('http://khenposodargye.org/content/themes/khenpo-2018/assets/images/frame-yellow.jpg')">
-            </div>
-        </div>
-        <div class="frame">
-            <div class="main-background" style="background-image:url('http://khenposodargye.org/content/themes/khenpo-2018/assets/images/frame-blue.png')">
-            </div>
-        </div>
-        <div class="frame">
-            <div class="main-background" style="background-image:url('http://khenposodargye.org/content/themes/khenpo-2018/assets/images/frame-red.png')">
-            </div>
-        </div>
-    </div> --}}
-    <div id="skrollr-body">
+    <div class="skrollr-body">
         <header>
             <section id="photo-slideshow" class="homeSlide">
                 <div class="bcg" data-center="background-position: 50% 0px" data-top-bottom="background-position: 50% -200px" data-anchor-target="#photo-slideshow">
