@@ -63,7 +63,7 @@
                         </div>
                         <div class="inputgroup">
                             <input id="mk4" name="mk4" type="checkbox">
-                            <label for="mk4">Pemrograman Citra Digital</label>
+                            <label for="mk4">Pengolahan Citra Digital</label>
                         </div>
                         <div class="inputgroup">
                             <input id="mk5" name="mk5" type="checkbox">
@@ -75,7 +75,7 @@
                         </div>
                         <div class="inputgroup">
                             <input id="mk7" name="mk7" type="checkbox">
-                            <label for="mk7">Robotik</label>
+                            <label for="mk7">Robotika</label>
                         </div>
                         <div class="inputgroup">
                             <input id="mk8" name="mk8" type="checkbox">
@@ -83,7 +83,15 @@
                         </div>
                         <div class="inputgroup">
                             <input id="mk9" name="mk9" type="checkbox">
-                            <label for="mk9">Analisis Media Sosial</label>
+                            <label for="mk9">Analisis Jejaring Sosial</label>
+                        </div>
+                        <div class="inputgroup">
+                            <input id="mk10" name="mk10" type="checkbox">
+                            <label for="mk10">Komputasi Biomedik</label>
+                        </div>
+                        <div class="inputgroup">
+                            <input id="mk11" name="mk11" type="checkbox">
+                            <label for="mk11">Deep Learning</label>
                         </div>
 
                     </div>
