@@ -1,6 +1,6 @@
 <div class="navheader links clear">
     	
-    <div style="float: left">
+    <div style="text-align: center;">
     	<a class="logokcv" href="{{ url('/') }}">
 	   		<img src="{{asset('images/logokcv.png')}}" alt>
     	</a>
@@ -13,11 +13,11 @@
     		@auth
           <a class="navlink" href="{{ url('/dashboard') }}">Home</a>
        	@else
-          <a class="navlink" href="{{ route('login') }}">Login</a>
+          {{-- <a class="navlink" href="{{ route('login') }}">Login</a> --}}
        	@endauth
       @else
        	@guest
-           <a class="navlink" href="{{ route('login') }}">Login</a>
+           {{-- <a class="navlink" href="{{ route('login') }}">Login</a> --}}
 	       @else
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}

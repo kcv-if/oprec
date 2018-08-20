@@ -52,9 +52,7 @@
                             <input type="file" name="foto">
                         </div>
 
-                        <div class="form-group col-md-12 btn">
-                            <button class="btnsubmit">Submit</button>
-                        </div>
+                        
                     </div>
                     <div class="col-lg-4 col-sm-5 formright">
                         <h2>Mata Kuliah RMK KCV yang diminati</h2>
@@ -105,6 +103,9 @@
                             <label for="mk11">Deep Learning</label>
                         </div>
 
+                    </div>
+                    <div class="form-group col-lg-8 col-sm-7 btn">
+                        <button class="btnsubmit">Submit</button>
                     </div>
                     {{ Form::close() }}
                 </div> 
