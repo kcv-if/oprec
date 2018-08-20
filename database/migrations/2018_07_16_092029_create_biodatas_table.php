@@ -17,11 +17,23 @@ class CreateBiodatasTable extends Migration
             $table->increments('id');
             $table->string('nrp', 14);
             $table->string('nama');
+            $table->string('idline');
             $table->string('alasan');
             $table->string('hobi');
             $table->string('kesibukan');
             $table->string('path_foto');
             $table->string('path_transkrip');
+            $table->tinyInteger('mk1');
+            $table->tinyInteger('mk2');
+            $table->tinyInteger('mk3');
+            $table->tinyInteger('mk4');
+            $table->tinyInteger('mk5');
+            $table->tinyInteger('mk6');
+            $table->tinyInteger('mk7');
+            $table->tinyInteger('mk8');
+            $table->tinyInteger('mk9');
+            $table->tinyInteger('mk10');
+            $table->tinyInteger('mk11');
             $table->timestamps();
         });
     }
