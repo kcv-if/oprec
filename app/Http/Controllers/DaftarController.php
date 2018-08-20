@@ -16,7 +16,7 @@ class DaftarController extends Controller
     {
 //        dd($request);
         $validator = Validator::make($request->all(), [
-            'nrp' => 'required|regex:/0511174000[0-9]{4}/u',
+            'nrp' => 'required|unique:biodatas,nrp|regex:/0511174000[0-9]{4}/u',
             'nama' => 'required',
             'idline' => 'required',
             'alasan' => 'required',
