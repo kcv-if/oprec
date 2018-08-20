@@ -15,7 +15,7 @@ class CreateBiodatasTable extends Migration
     {
         Schema::create('biodatas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nrp', 14);
+            $table->string('nrp', 14)->unique();
             $table->string('nama');
             $table->string('idline');
             $table->string('alasan');
