@@ -18,6 +18,7 @@ class DaftarController extends Controller
         $validator = Validator::make($request->all(), [
             'nrp' => 'required|regex:/0511174000[0-9]{4}/u',
             'nama' => 'required',
+            'idline' => 'required',
             'alasan' => 'required',
             'hobi' => 'required',
             'kesibukan' => 'required',
@@ -38,37 +39,36 @@ class DaftarController extends Controller
         if ($validator->fails()) {
             // dd($validator);
             // dd($request);
-            return redirect(route('daftar'))
-                        ->withErrors($validator)
-                        ->withInput();
+            return redirect(route('daftar'))->withErrors($validator)->withInput();
         }
-        // dd($validator);
-        $foto_name = time().'.foto.'.$validator->nrp.'.'.$validator->foto->getClientOriginalExtension();
-        $transkrip_name = time().'.transkrip.'.$validator->nrp.'.'.$validator->transkrip->getClientOriginalExtension();
-        $validator->foto->move(public_path('foto'), $foto_name);
-        $validator->transkrip->move(public_path('transkrip'), $transkrip_name);
+        //dd($validator);
+        $foto_name = time().'.foto.'.$request->nrp.'.'.$request->foto->getClientOriginalExtension();
+        $transkrip_name = time().'.transkrip.'.$request->nrp.'.'.$request->transkrip->getClientOriginalExtension();
+        $request->foto->move(public_path('foto'), $foto_name);
+        $request->transkrip->move(public_path('transkrip'), $transkrip_name);
 
         $data = new Biodata();
-        $data->nrp = $validator->nrp;
-        $data->nama = $validator->nama;
-        $data->alasan = $validator->alasan;
-        $data->hobi = $validator->hobi;
-        $data->kesibukan = $validator->kesibukan;
+        $data->nrp = $request->nrp;
+        $data->nama = $request->nama;
+        $data->idline = $request->idline;
+        $data->alasan = $request->alasan;
+        $data->hobi = $request->hobi;
+        $data->kesibukan = $request->kesibukan;
         $data->path_foto = '/foto/'.$foto_name;
         $data->path_transkrip = '/transkrip/'.$transkrip_name;
-        $data->mk1 = !is_null($validator->mk1);
-        $data->mk2 = !is_null($validator->mk2);
-        $data->mk3 = !is_null($validator->mk3);
-        $data->mk4 = !is_null($validator->mk4);
-        $data->mk5 = !is_null($validator->mk5);
-        $data->mk6 = !is_null($validator->mk6);
-        $data->mk7 = !is_null($validator->mk7);
-        $data->mk8 = !is_null($validator->mk8);
-        $data->mk9 = !is_null($validator->mk9);
-        $data->mk10 = !is_null($validator->mk10);
-        $data->mk11 = !is_null($validator->mk11);
+        $data->mk1 = !is_null($request->mk1);
+        $data->mk2 = !is_null($request->mk2);
+        $data->mk3 = !is_null($request->mk3);
+        $data->mk4 = !is_null($request->mk4);
+        $data->mk5 = !is_null($request->mk5);
+        $data->mk6 = !is_null($request->mk6);
+        $data->mk7 = !is_null($request->mk7);
+        $data->mk8 = !is_null($request->mk8);
+        $data->mk9 = !is_null($request->mk9);
+        $data->mk10 = !is_null($request->mk10);
+        $data->mk11 = !is_null($request->mk11);
         $data->save();
 
-        return redirect(route('home'));
+        return redirect()->back()->with('message', 'Selamat kamu telah terdaftar menjadi calon admin!');
     }
 }

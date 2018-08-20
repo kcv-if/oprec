@@ -28,6 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" integrity="sha256-rUSIjmg03RQ3LWNpEkVRPNoXytm7f1rJ3xAWO6gxCPc=" crossorigin="anonymous"></script>
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/script.js')}}"></script>
+    
 
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 

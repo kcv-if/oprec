@@ -16,6 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/home', function () {
+    return view('welcome');
+});
+
 Auth::routes();
 
 Route::get('/daftar', 'DaftarController@daftar_create')->name('daftar');

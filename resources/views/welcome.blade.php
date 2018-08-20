@@ -24,19 +24,19 @@
         <section id="admin15" class="center">
             <div class="photo-container">
                 <div class="admin">
-                    <img src="images/chasni.png" />
+                    <img src="images/admin.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/rosyid.png" />
+                    <img src="images/admin.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/prana.png" />
+                    <img src="images/admin.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/jujung.png" />
+                    <img src="images/admin.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/upili.png" />
+                    <img src="images/admin.png" />
                 </div>
             </div>
 
@@ -60,19 +60,19 @@
         <section id="admin16" class="center">
             <div class="photo-container">
                 <div class="admin">
-                    <img src="images/randi.png" />
+                    <img src="images/admin.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/dandy.png" />
+                    <img src="images/admin.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/aldi.png" />
+                    <img src="images/admin.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/yoshi.png" />
+                    <img src="images/admin.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/tutut.png" />
+                    <img src="images/admin.png" />
                 </div>
             </div>
 
