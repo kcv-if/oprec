@@ -21,6 +21,57 @@ body{
     border-radius:10px;
 }
 
+::-moz-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-moz-scrollbar-track {
+    background: transparent;
+    width: 2px;
+}
+ 
+/* Handle */
+::-moz-scrollbar-thumb {
+    background: #888; 
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+
+::-ms-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-ms-scrollbar-track {
+    background: transparent;
+    width: 2px;
+}
+ 
+/* Handle */
+::-ms-scrollbar-thumb {
+    background: #888; 
+    -ms-border-radius:10px;
+    border-radius:10px;
+}
+
+::-o-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-o-scrollbar-track {
+    background: transparent;
+    width: 2px;
+}
+ 
+/* Handle */
+::-o-scrollbar-thumb {
+    background: #888; 
+    -o-border-radius:10px;
+    border-radius:10px;
+}
+
 a:link, a:visited, a:hover, a:active {
 	text-decoration: none !important;
 }
