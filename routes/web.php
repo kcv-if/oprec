@@ -16,7 +16,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Auth::routes();
 
 Route::get('/daftar', 'DaftarController@daftar_create')->name('daftar');
 Route::post('/daftar', 'DaftarController@daftar_store')->name('daftar.store');
@@ -25,3 +24,45 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('dashboard');
     Route::get('detail/{id}', 'HomeController@detail_pendaftar')->name('dashboard.detail');
 });
+
+// Authentication Routes...
+Route::get('login', [
+    'as' => 'login',
+    'uses' => 'Auth\LoginController@showLoginForm'
+]);
+Route::post('login', [
+    'as' => '',
+    'uses' => 'Auth\LoginController@login'
+]);
+Route::post('logout', [
+    'as' => 'logout',
+    'uses' => 'Auth\LoginController@logout'
+]);
+
+// Password Reset Routes...
+Route::post('password/email', [
+    'as' => 'password.email',
+    'uses' => 'Auth\ForgotPasswordController@sendResetLinkEmail'
+]);
+Route::get('password/reset', [
+    'as' => 'password.request',
+    'uses' => 'Auth\ForgotPasswordController@showLinkRequestForm'
+]);
+Route::post('password/reset', [
+    'as' => '',
+    'uses' => 'Auth\ResetPasswordController@reset'
+]);
+Route::get('password/reset/{token}', [
+    'as' => 'password.reset',
+    'uses' => 'Auth\ResetPasswordController@showResetForm'
+]);
+
+// Registration Routes...
+Route::get('registrar', [
+    'as' => 'register',
+    'uses' => 'Auth\RegisterController@showRegistrationForm'
+]);
+Route::post('registrar', [
+    'as' => '',
+    'uses' => 'Auth\RegisterController@register'
+]);
