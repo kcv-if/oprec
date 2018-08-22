@@ -1,10 +1,18 @@
 <div class="navheader links clear">
-    	
-    <div style="text-align: center;">
-    	<a class="logokcv" href="{{ url('/') }}">
-	   		<img src="{{asset('images/logokcv.png')}}" alt>
-    	</a>
-   	</div>
+    
+    @guest
+      <div style="text-align: center;">
+      	<a class="logokcv" href="{{ url('/') }}">
+  	   		<img src="{{asset('images/logokcv.png')}}" alt>
+      	</a>
+     	</div>
+    @else
+      <div style="float: left;">
+        <a class="logokcv" href="{{ url('/') }}">
+          <img src="{{asset('images/logokcv.png')}}" alt>
+        </a>
+      </div>
+    @endguest
 
    	@yield('navcontent')
 
@@ -23,7 +31,7 @@
                         {{ Auth::user()->name }}
                     </a>
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="max-width: 100px !important;">
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>

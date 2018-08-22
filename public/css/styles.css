@@ -578,6 +578,8 @@ footer{
     border-color: #f0505e;
 }
 
+/*------------------responsive -------------------*/
+
 @media only screen and (min-width: 900px){
     .mycontainer .row{
         height: 100%;
@@ -654,6 +656,10 @@ footer{
 
     .container .row{
         background-color: #ffffff;
+    }
+
+    .alert.alert-dismissible {
+        width: 70%;
     }
 
 }

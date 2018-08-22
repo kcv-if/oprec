@@ -2,6 +2,28 @@
 
 @include('layouts.nav')
 @section('content')
+    <div style="position: fixed; top: 5px; left:2%; width: 96%; z-index: 1000;">
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p>{{ $error }}</p>
+        </div>
+        @endforeach
+    @endif
+
+    @if (session()->has('message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p>{{ session()->get('message') }}</p>
+        </div>
+    @endif
+    </div>
+
     <div class="containerwrap">
     <div class="container mycontainer">
         <div class="row">
@@ -39,7 +61,7 @@
                     </span>
                 </div>
                 <div class="form-group col-md-6">
-                    <p>Transkrip*</p>
+                    <p>Transkrip IP*</p>
                     <p>*PDF, max file 2MB</p>
                     <input type="file" name="transkrip">
                 </div>
@@ -107,25 +129,7 @@
     </div>
     </div>
 
-    @if ($errors->any())
-        @foreach ($errors->all() as $error)
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <p>{{ $error }}</p>
-        </div>
-        @endforeach
-    @endif
-
-    @if (session()->has('message'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <p>{{ session()->get('message') }}</p>
-        </div>
-    @endif
+    
 @endsection
 
 
