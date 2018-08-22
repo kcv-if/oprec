@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = Biodata::all()
+        $data = Biodata::all();
         return view('dashboard.home', compact('data'));
     }
 
