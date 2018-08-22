@@ -327,21 +327,14 @@ footer{
 
 /*----------------daftar.blade.php-----------------*/
 
-.logokcv.daftar{
-    position: absolute;
-    top: 0;
+.containerwrap{
+    background-color: #ffffff;
 }
 
 .mycontainer{
+    margin-top: 50px;
+    height: 90%;
     background-color: #ffffff;
-    width: calc(100% - 30px);
-    height: calc(100% - 30px);
-    position: fixed;
-}
-
-.vertical-center{
-    display: flex;
-    align-items: center;
 }
 
 .formleft{
@@ -352,7 +345,7 @@ footer{
     background-color: #f0505e;
     height: 100%;
     padding: 15px;
-    height: calc(100% - 37px);
+    height: calc(100% - 10px);
 }
 
 .form-control-wrap input, .form-control-wrap textarea{
@@ -513,10 +506,10 @@ footer{
     border-radius: 0;
     transition: .3s all ease-in-out;
     font-weight: 700;
-    padding: 12px 100px;
+    padding: 10px 100px;
     width: 100%;
     position: relative;
-    top: -61px;
+    top: -58px;
 }
 
 .btnsubmit:hover{
@@ -585,6 +578,13 @@ footer{
     border-color: #f0505e;
 }
 
+@media only screen and (min-width: 900px){
+    .mycontainer .row{
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
 @media only screen and (max-width: 900px){
     body{
         height: 100%;
@@ -619,10 +619,6 @@ footer{
         display: none !important;
     }
 
-    .mycontainer{
-        position: absolute;
-    }
-
     .vertical-center{
         display: block;
     }
@@ -651,4 +647,13 @@ footer{
     .contact.cta .container p{
         margin: 0;
     }
+
+    .row form{
+        width: 100%;
+    }
+
+    .container .row{
+        background-color: #ffffff;
+    }
+
 }
