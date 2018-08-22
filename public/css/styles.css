@@ -21,57 +21,6 @@ body{
     border-radius:10px;
 }
 
-::-moz-scrollbar {
-    width: 5px;
-}
-
-/* Track */
-::-moz-scrollbar-track {
-    background: transparent;
-    width: 2px;
-}
- 
-/* Handle */
-::-moz-scrollbar-thumb {
-    background: #888; 
-    -moz-border-radius:10px;
-    border-radius:10px;
-}
-
-::-ms-scrollbar {
-    width: 5px;
-}
-
-/* Track */
-::-ms-scrollbar-track {
-    background: transparent;
-    width: 2px;
-}
- 
-/* Handle */
-::-ms-scrollbar-thumb {
-    background: #888; 
-    -ms-border-radius:10px;
-    border-radius:10px;
-}
-
-::-o-scrollbar {
-    width: 5px;
-}
-
-/* Track */
-::-o-scrollbar-track {
-    background: transparent;
-    width: 2px;
-}
- 
-/* Handle */
-::-o-scrollbar-thumb {
-    background: #888; 
-    -o-border-radius:10px;
-    border-radius:10px;
-}
-
 a:link, a:visited, a:hover, a:active {
 	text-decoration: none !important;
 }
@@ -163,6 +112,14 @@ header{
     /*transition: background 1s linear;*/
 }
 
+.bcg-responsive{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+}
+
 section#intro{
 	padding: 50px 0 80px 0;
 }
@@ -185,8 +142,10 @@ section#admin15 .icons{
 	left: 0;
 }
 
-section#admin15 .icons img{
-	position: absolute;
+section#admin15 .icons-responsive{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 section#admin15 .icons img.icon:nth-child(1){
@@ -200,19 +159,24 @@ section#admin15 .icons img.icon:nth-child(2){
     left: -5px;
 }
 
-section#admin15 .icons img.icon:nth-child(3){
-    top: 500px;
-    left: 0px;
-    z-index: 11;
+section#admin15 .icons-responsive img{
+    position: absolute;
 }
 
-section#admin15 .icons img.icon:nth-child(4){
-    top: 470px;
-    left: -30px;
-    z-index: 12;
+section#admin15 .icons img{
+    position: absolute;
 }
 
+section#admin15 .icons-responsive img.icon:nth-child(1){
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
 
+section#admin15 .icons-responsive img.icon:nth-child(2){
+    top: 5px;
+    left: -5px;
+}
 
 section#admin16{
 	padding: 150px 0 50px 0;
@@ -238,12 +202,33 @@ section#admin16 .icons img.icon:nth-child(1){
     z-index: 10;
 }
 
-section#admin16 .icons img.icon:nth-child(2){
+section#admin16 .icons-responsive img.icon:nth-child(2){
     top: 15px;
     right: 25px;
 }
 
+section#admin16 .icons-responsive{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
+section#admin16 .icons-responsive img{
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+section#admin16 .icons-responsive img.icon:nth-child(1){
+    top: 20px;
+    right: 0px;
+    z-index: 10;
+}
+
+section#admin16 .icons-responsive img.icon:nth-child(2){
+    top: 15px;
+    right: 25px;
+}
 
 
 section .container{
@@ -318,11 +303,6 @@ section#intro .container p{
     text-align: center;
 }
 
-@media only screen and (max-width: 900px) {
-    .contact.cta .container p{
-        margin: 0;
-    }
-}
 
 .white{
     color: #fff;
@@ -545,34 +525,6 @@ footer{
     border-color: #f0505e;
 }
 
-@media only screen and (max-width: 900px){
-    .mycontainer{
-        position: absolute;
-    }
-
-    .vertical-center{
-        display: block;
-    }
-
-    .form-group.col-md-6{
-        width: 100%;
-    }
-
-    .formleft .form-group:nth-child(8) *, .formleft .form-group:nth-child(9) *{
-        padding-left: 15px;
-    }
-
-    .formright{
-        height: auto;
-    }
-
-    .btnsubmit{
-        top: 40px;
-        margin-bottom: 30px;
-    }
-}
-
-
 /*-----------home dashboard------------------*/
 .home-container{
     margin-left: auto;
@@ -631,4 +583,72 @@ footer{
     background-color: #f0505e;
     color: #ffffff;
     border-color: #f0505e;
+}
+
+@media only screen and (max-width: 900px){
+    body{
+        height: 100%;
+        overflow: scroll !important;
+    }
+
+    header{
+        display: none !important;
+    }
+
+    #photo-slideshow-responsive{
+        display: block !important;
+    }
+
+    section#admin15{
+        padding-top: 100px;
+    }
+
+    section#admin15 .icons-responsive{
+        display: block !important;
+    }
+
+    section#admin15 .icons{
+        display: none !important;
+    }
+
+    section#admin16 .icons-responsive{
+        display: block !important;
+    }
+
+    section#admin16 .icons{
+        display: none !important;
+    }
+
+    .mycontainer{
+        position: absolute;
+    }
+
+    .vertical-center{
+        display: block;
+    }
+
+    .form-group.col-md-6{
+        width: 100%;
+    }
+
+    .formleft .form-group:nth-child(8) *, .formleft .form-group:nth-child(9) *{
+        padding-left: 15px;
+    }
+
+    .formright{
+        height: auto;
+    }
+
+    .btnsubmit{
+        top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .contact.cta{
+        padding-top: 100px;
+    }
+
+    .contact.cta .container p{
+        margin: 0;
+    }
 }

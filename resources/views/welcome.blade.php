@@ -2,7 +2,6 @@
 
 @include('layouts.nav')
 @section('content')
-    <div class="skrollr-body">
         <header>
             <section id="photo-slideshow" class="homeSlide">
                 <div class="bcg" data-center="background-position: 50% 0px" data-top-bottom="background-position: 50% -200px" data-anchor-target="#photo-slideshow">
@@ -14,6 +13,11 @@
             </section>
         </header>
 
+        <section id="photo-slideshow-responsive" class="homeSlide-responsive" style="display: none;">
+            <div class="bcg-responsive">
+            </div>
+        </section>
+        
         <section id="intro">
             <div class="container center">
                 <h2>KCV adalah suatu lab di Informatika ITS yang terletak di antara lab NCC dan LP.</h2>
@@ -22,6 +26,13 @@
         </section>
 
         <section id="admin15" class="center">
+            <div class="icons-responsive" style="display: none;">
+                <img src="images/shape1.png" class="icon" 
+                />
+                <img src="images/shape2.png" class="icon"
+                />
+            </div>
+
             <div class="photo-container">
                 <div class="admin">
                     <img src="images/admin.png" />
@@ -47,17 +58,17 @@
                 <img src="images/shape2.png" class="icon" 
                     data-top="margin-top: 85px" data-center-top="margin-top: -200px"
                 />
-                <img src="images/shape3.png" class="icon" 
-                    
-                />
-                <img src="images/shape4.png" class="icon" 
-                    
-                />
             </div>
-
         </section>
 
         <section id="admin16" class="center">
+            <div class="icons-responsive" style="display: none;">
+                <img src="images/shape5.png" class="icon"
+                />
+                <img src="images/shape2.png" class="icon"
+                />
+            </div>
+
             <div class="photo-container">
                 <div class="admin">
                     <img src="images/admin.png" />
@@ -84,7 +95,7 @@
                    data-top="margin-top: 25px" data-bottom-top="margin-top: -300px"
                 />
             </div>
-
+        
         </section>
 
         <div class="contact cta">
@@ -97,7 +108,4 @@
         <footer class="quiet">
             <p>KCV. Copyright 2018. All rights reserved.</p>
         </footer>
-    
-    </div>
-    
 @endsection
