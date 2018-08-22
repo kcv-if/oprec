@@ -24,10 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = array(
-            'calon' => Biodata::all(),
-            'jumlah' => count(Biodata::all())
-        );
+        $data = Biodata::all()
         return view('dashboard.home', compact('data'));
     }
 
