@@ -14,7 +14,9 @@
                     <li class="table-row">
                         <div class="col col-md-4" data-label="nrp">{{ $d->nrp }}</div>
                         <div class="col col-md-6" data-label="name">{{ $d->nama }}</div>
-                        <button class="col col-md-2 btnaction" data-label="detail">Detail</button>
+                        <form action={{ route('dashboard.detail', ['id' => $d->id]) }}>
+                            <button class="col col-md-2 btnaction" data-label="detail">Detail</button>
+                        </form>
                     </li>
                 @endforeach
                 {{--<li class="table-row">--}}
