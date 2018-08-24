@@ -30,7 +30,7 @@
 					</ul>
 
 					<div class="space-between">
-						<button class="col-lg-4 btnaction" onclick="window.open('{{url($data->path_transkrip)}}', '_blank')">Transkrip IP</button>
+						<button class="col-lg-4 btnaction" onclick="window.open('{{ url('/dashboard/{$data->path_transkrip}') }}', '_blank')">Transkrip IP</button>
 						<div class="col-lg-4">
 							<i class="fab fa-line fa-lg"></i>
 							{{$data->idline}} 
