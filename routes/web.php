@@ -19,11 +19,11 @@ Route::get('/', function () {
 
 Route::get('/daftar', 'DaftarController@daftar_create')->name('daftar');
 Route::post('/daftar', 'DaftarController@daftar_store')->name('daftar.store');
-Route::get('transkrip/{public_path}', 'HomeController@show_transkrip')->name('transkrip');
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('dashboard');
     Route::get('detail/{id}', 'HomeController@detail_pendaftar')->name('dashboard.detail');
+    Route::get('transkrip/{public_path}', 'HomeController@show_transkrip')->name('transkrip');
 });
 
 // Authentication Routes...
