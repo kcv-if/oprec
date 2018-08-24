@@ -1,5 +1,4 @@
 <div class="navheader links clear">
-    
     @guest
       <div style="text-align: center;">
       	<a class="logokcv" href="{{ url('/') }}">
@@ -17,16 +16,10 @@
    	@yield('navcontent')
 
    	<div style="float: right;">
-    	@if(Request::is('/'))
-    		@auth
-          <a class="navlink" href="{{ url('/dashboard') }}">Home</a>
-       	@else
-          {{-- <a class="navlink" href="{{ route('login') }}">Login</a> --}}
-       	@endauth
-      @else
-       	@guest
+    	@if(Request::is('dashboard'))
+        @guest
            {{-- <a class="navlink" href="{{ route('login') }}">Login</a> --}}
-	       @else
+         @else
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
@@ -40,7 +33,14 @@
                             @csrf
                         </form>
                     </div>
-	        @endguest
+          @endguest
+    		
+      @else
+       	@auth
+          <a class="navlink" href="{{ url('/dashboard') }}">Home</a>
+        @else
+          {{-- <a class="navlink" href="{{ route('login') }}">Login</a> --}}
+        @endauth
    		@endif
    	</div>
 </div>
