@@ -35,7 +35,7 @@ class HomeController extends Controller
         return view('dashboard.detail', compact('data'));
     }
 
-    public funtion show_transkrip($public_path)
+    public function show_transkrip($public_path)
     {
         $path = storage_path('/transkrip/'.$public_path);
         return response->file($path);
