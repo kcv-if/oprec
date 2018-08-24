@@ -38,6 +38,6 @@ class HomeController extends Controller
     public function show_transkrip($public_path)
     {
         $path = storage_path('/transkrip/'.$public_path);
-        return response->file($path);
+        return response()->file($path);
     }
 }
