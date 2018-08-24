@@ -23,7 +23,7 @@ Route::post('/daftar', 'DaftarController@daftar_store')->name('daftar.store');
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('dashboard');
     Route::get('detail/{id}', 'HomeController@detail_pendaftar')->name('dashboard.detail');
-    Route::get('transkrip/{public_path}', 'HomeController@show_transkrip')->name('dashboard.transkrip');
+    Route::get('transkrips/{public_path}', 'HomeController@show_transkrip')->name('dashboard.transkrip');
 });
 
 // Authentication Routes...
