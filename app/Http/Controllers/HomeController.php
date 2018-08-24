@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Biodata;
+use Response;
 
 class HomeController extends Controller
 {
@@ -32,5 +33,11 @@ class HomeController extends Controller
     {
         $data = Biodata::find($id);
         return view('dashboard.detail', compact('data'));
+    }
+
+    public funtion show_transkrip($public_path)
+    {
+        $path = storage_path('/transkrip/'.$public_path);
+        return response->file($path);
     }
 }
