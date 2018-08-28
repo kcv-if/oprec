@@ -39,6 +39,6 @@ class HomeController extends Controller
     {
         $path = public_path('transkrip/'.$public_path);
 //        dd($path);
-        return response()->file($path)->header('Content-Type', 'application/pdf');
+        return response()->file($path);
     }
 }
