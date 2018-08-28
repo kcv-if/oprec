@@ -38,7 +38,7 @@ class HomeController extends Controller
     public function show_transkrip($public_path)
     {
         $path = public_path('transkrip/'.$public_path);
-        dd($path);
+//        dd($path);
         return response()->file($path)->header('Content-Type', 'application/pdf');
     }
 }
