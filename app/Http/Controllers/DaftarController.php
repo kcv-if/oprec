@@ -1,20 +1,28 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace App\Http\Controllers;
 use Validator;
 use Illuminate\Http\Request;
 use App\Biodata;
+use Carbon\Carbon;
 
 class DaftarController extends Controller
 {
     public function daftar_create()
     {
-        return view('daftar');
+        $time = Carbon::now();
+        if((int)$time->format('d') >= 3)
+        {
+            return view('oprec-closed');
+        }
+        else
+        {
+            return view('daftar');
+        }
     }
 
     public function daftar_store(Request $request)
     {
-//        dd($request);
         $validator = Validator::make($request->all(), [
             'nrp' => 'required|unique:biodatas,nrp|regex:/0511174000[0-9]{4}/u',
             'nama' => 'required',
@@ -37,8 +45,6 @@ class DaftarController extends Controller
             'mk11' => 'nullable',
         ]);
         if ($validator->fails()) {
-            // dd($validator);
-            // dd($request);
             return redirect(route('daftar'))->withErrors($validator)->withInput();
         }
         //dd($validator);
