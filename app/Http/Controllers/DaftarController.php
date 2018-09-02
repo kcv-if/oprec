@@ -10,7 +10,7 @@ class DaftarController extends Controller
 {
     public function daftar_create()
     {
-        $time = Carbon::now();
+        $time = Carbon::now()->addHours(7);
         if((int)$time->format('d') >= 3)
         {
             return view('oprec-closed');
