@@ -16,6 +16,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/cobas', function () {
+    return "bagus";
+});
 
 Route::get('/daftar', 'DaftarController@daftar_create')->name('daftar');
 Route::post('/daftar', 'DaftarController@daftar_store')->name('daftar.store');
