@@ -16,12 +16,13 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/cobas', function () {
-    return "bagus";
-});
+Route::get('/pengumuman', function () {
+    return view('pengumuman');
+})->name('pengumuman');
 
 Route::get('/daftar', 'DaftarController@daftar_create')->name('daftar');
 Route::post('/daftar', 'DaftarController@daftar_store')->name('daftar.store');
+Route::post('/pengumuman', 'PengumumanController@show')->name('pengumuman.show');
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('dashboard');
