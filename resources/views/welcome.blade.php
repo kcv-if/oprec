@@ -35,19 +35,19 @@
 
             <div class="photo-container">
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/1.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/2.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/3.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/4.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/5.png" />
                 </div>
             </div>
 
@@ -71,19 +71,19 @@
 
             <div class="photo-container">
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/6.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/7.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/8.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/9.png" />
                 </div>
                 <div class="admin">
-                    <img src="images/admin.png" />
+                    <img src="images/10.png" />
                 </div>
             </div>
 

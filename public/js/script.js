@@ -1,5 +1,5 @@
 
-var admin_photo = new Array('url(../images/img2.jpg)', 'url(../images/img3.jpg)', 'url(../images/img4.jpg)', 'url(../images/img5.jpg)', 'url(../images/img6.jpg)', 'url(../images/img1.jpg)');
+var admin_photo = new Array('url(../images/img2.jpg)', 'url(../images/img3.jpg)', 'url(../images/img1.jpg)');
 var current = 0;
 var current_2 = 0;
 
@@ -51,4 +51,14 @@ else{
   	$('.navheader').addClass('header-sticky');
 }
 
-
+function expand() {
+	$(".search").toggleClass("close");
+	$("input").toggleClass("square");
+	if ($('.search').hasClass('close')) {
+	  	$('input').focus();
+		$('.labelnrp').fadeIn('slow');
+	} else {
+	  	$('input').blur();
+		$('.labelnrp').fadeOut('slow');
+	}
+};
