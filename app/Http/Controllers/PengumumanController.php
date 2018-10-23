@@ -49,7 +49,7 @@ class PengumumanController extends Controller
         $nrp = $request->nrp;
         $pengumumans = Pengumuman::where('nrp', $nrp)->get();
         if(count($pengumumans) == 0) {
-            $lolos = 0;
+            $lolos = 2;
         }
         else {
             $lolos = $pengumumans[0]['lolos'];

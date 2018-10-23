@@ -19,7 +19,7 @@
     </div>
 
     @if($lolos == "-1")
-    @elseif($lolos == "0")
+    @elseif($lolos == "2")
         <div class="modal fade" id="modalpengumuman" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -33,12 +33,26 @@
             </div>
         </div>
         <script type="text/javascript">$("#modalpengumuman").modal()</script>
-    @else
+    @elseif($lolos == "1")
         <div class="modal fade" id="modalpengumuman" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5>Lolos ga yaaaa</h5>
+                        <h5>Selamat anda lolos ke tahap berikutnya ^^ semangat!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">$("#modalpengumuman").modal()</script>
+    @elseif($lolos == "0")
+        <div class="modal fade" id="modalpengumuman" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Maaf anda belum beruntung :( semangat!</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
