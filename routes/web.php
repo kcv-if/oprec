@@ -17,7 +17,8 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/pengumuman', function () {
-    return view('pengumuman');
+    $lolos = -1;
+    return view('pengumuman', compact('lolos'));
 })->name('pengumuman');
 
 Route::get('/daftar', 'DaftarController@daftar_create')->name('daftar');

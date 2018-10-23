@@ -52,9 +52,9 @@ else{
 }
 
 function expand() {
-	$(".search").toggleClass("close");
+	$(".search").toggleClass("closesearch");
 	$("input").toggleClass("square");
-	if ($('.search').hasClass('close')) {
+	if ($('.search').hasClass('closesearch')) {
 	  	$('input').focus();
 		$('.labelnrp').fadeIn('slow');
 	} else {

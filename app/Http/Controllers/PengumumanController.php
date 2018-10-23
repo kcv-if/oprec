@@ -49,10 +49,12 @@ class PengumumanController extends Controller
         $nrp = $request->nrp;
         $pengumumans = Pengumuman::where('nrp', $nrp)->get();
         if(count($pengumumans) == 0) {
-            return 'nrp siapa tuh';
+            $lolos = 0;
         }
-        $lolos = $pengumumans[0]['lolos'];
-        return view('show_pengumuman', compact('lolos'));
+        else {
+            $lolos = $pengumumans[0]['lolos'];
+        }
+        return view('pengumuman', compact('lolos'));
     }
 
     /**

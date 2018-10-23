@@ -824,14 +824,14 @@ footer{
     transition: 0.2s ease-in-out;
 }
   
-.close {
+.closesearch {
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
     -webkit-transition-delay: 0.4s;
     transition-delay: 0.4s;
 }
   
-.close:before {
+.closesearch:before {
     content: "";
     position: absolute;
     width: 27px;
@@ -846,7 +846,7 @@ footer{
     transition: 0.2s ease-in-out;
 }
   
-.close:after {
+.closesearch:after {
     content: "";
     position: absolute;
     width: 27px;
@@ -887,4 +887,15 @@ footer{
     left: 50%;
     position: absolute;
     transform: translate(calc(-90%), calc(-100% - 30px));
+}
+
+.modal-header h5{
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 500px){
+    #formcontent {
+        margin-left: 145px;
+    }
 }
