@@ -43,6 +43,12 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    <div class="modal-body text-center">
+                        <p>Scan QR Code ini ya buat join grup line yang baru</p>
+                        <div class="qrcode text-center">
+                            <img src="images/531949.jpg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
